@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
     config.vm.define node[:hostname] do |nodeconfig|
       nodeconfig.vm.boot_timeout = timeout
       nodeconfig.vm.box = node[:box]
-      nodeconfig.vm.hostname = node[:hostname] + ".sv.easy"
+      nodeconfig.vm.hostname = node[:hostname] + ".sv.win"
       nodeconfig.vm.network :private_network, ip: node[:ip]
       nodeconfig.vm.provider :libvirt do |vb|
         vb.memory = node[:ram]
